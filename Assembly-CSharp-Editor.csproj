@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{FCF4EDE9-42F1-2528-AE03-E290923A68A3}</ProjectGuid>
+    <ProjectGuid>{DA6B0BDC-D601-F941-81AC-F5094E2615D8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -48,6 +48,9 @@
   <ItemGroup>
      <Compile Include="Assets\_Complete-Game\MobileInput\Scripts\Editor\CrossPlatformInputInitialize.cs" />
      <None Include="Assets\Fonts\LuckiestGuy\LICENSE.txt" />
+ <Reference Include="Assembly-UnityScript">
+ <HintPath>C:/Users/DaDa/Google Drive/NightShooter/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -105,7 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{51132D92-28F3-A3AF-4D51-DC6BAAF8E576}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{A581E076-2EED-2E17-6CAE-2992B0E3B93E}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

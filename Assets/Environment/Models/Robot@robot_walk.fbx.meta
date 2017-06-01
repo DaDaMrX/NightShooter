@@ -1,0 +1,201 @@
+fileFormatVersion: 2
+guid: 70b133e312f817943978379330cd0d83
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Body_bottom
+    100002: Body_bottom_geom
+    100004: Body_top
+    100006: Body_top_geom
+    100008: Foot
+    100010: Foot 1
+    100012: Heel
+    100014: Heel 1
+    100016: Hip_L
+    100018: Hip_R
+    100020: //RootNode
+    100022: Shin
+    100024: Shin 1
+    100026: Toe
+    100028: Toe 1
+    400000: Body_bottom
+    400002: Body_bottom_geom
+    400004: Body_top
+    400006: Body_top_geom
+    400008: Foot
+    400010: Foot 1
+    400012: Heel
+    400014: Heel 1
+    400016: Hip_L
+    400018: Hip_R
+    400020: //RootNode
+    400022: Shin
+    400024: Shin 1
+    400026: Toe
+    400028: Toe 1
+    2300000: Body_bottom_geom
+    2300002: Body_top_geom
+    2300004: Foot
+    2300006: Foot 1
+    2300008: Heel
+    2300010: Heel 1
+    2300012: Hip_L
+    2300014: Hip_R
+    2300016: Shin
+    2300018: Shin 1
+    2300020: Toe
+    2300022: Toe 1
+    3300000: Body_bottom_geom
+    3300002: Body_top_geom
+    3300004: Foot
+    3300006: Foot 1
+    3300008: Heel
+    3300010: Heel 1
+    3300012: Hip_L
+    3300014: Hip_R
+    3300016: Shin
+    3300018: Shin 1
+    3300020: Toe
+    3300022: Toe 1
+    4300000: Body_top_geom
+    4300002: Body_bottom_geom
+    4300004: Hip_L
+    4300006: Shin
+    4300008: Foot
+    4300010: Heel
+    4300012: Toe
+    4300014: Hip_R
+    4300016: Shin
+    4300018: Foot
+    4300020: Heel
+    4300022: Toe
+    7400000: robot_walk
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: robot_walk
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Body_bottom
+        weight: 1
+      - path: Body_bottom/Body_bottom_geom
+        weight: 1
+      - path: Body_bottom/Hip_L
+        weight: 1
+      - path: Body_bottom/Hip_L/Shin
+        weight: 1
+      - path: Body_bottom/Hip_L/Shin/Foot
+        weight: 1
+      - path: Body_bottom/Hip_L/Shin/Foot/Heel
+        weight: 1
+      - path: Body_bottom/Hip_L/Shin/Foot/Toe
+        weight: 1
+      - path: Body_bottom/Hip_R
+        weight: 1
+      - path: Body_bottom/Hip_R/Shin 1
+        weight: 1
+      - path: Body_bottom/Hip_R/Shin 1/Foot 1
+        weight: 1
+      - path: Body_bottom/Hip_R/Shin 1/Foot 1/Heel 1
+        weight: 1
+      - path: Body_bottom/Hip_R/Shin 1/Foot 1/Toe 1
+        weight: 1
+      - path: Body_top
+        weight: 1
+      - path: Body_top/Body_top_geom
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

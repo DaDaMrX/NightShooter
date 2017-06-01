@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: bcf820eb213d0654a81242f151506fa3
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Tank_body
+    100002: //RootNode
+    100004: Tank_body_geom
+    100006: Tank_exhaust
+    100008: Tank_exhaust 1
+    100010: Tank_front_wheel
+    100012: Tank_front_wheel 1
+    100014: Tank_rear_wheel
+    100016: Tank_rear_wheel 1
+    100018: Tank_track
+    100020: Tank_track 1
+    100022: Tank_transmission_L
+    100024: Tank_transmission_R
+    400000: Tank_body
+    400002: //RootNode
+    400004: Tank_body_geom
+    400006: Tank_exhaust
+    400008: Tank_exhaust 1
+    400010: Tank_front_wheel
+    400012: Tank_front_wheel 1
+    400014: Tank_rear_wheel
+    400016: Tank_rear_wheel 1
+    400018: Tank_track
+    400020: Tank_track 1
+    400022: Tank_transmission_L
+    400024: Tank_transmission_R
+    2300000: Tank_body_geom
+    2300002: Tank_exhaust
+    2300004: Tank_exhaust 1
+    2300006: Tank_front_wheel
+    2300008: Tank_front_wheel 1
+    2300010: Tank_rear_wheel
+    2300012: Tank_rear_wheel 1
+    2300014: Tank_track
+    2300016: Tank_track 1
+    3300000: Tank_body_geom
+    3300002: Tank_exhaust
+    3300004: Tank_exhaust 1
+    3300006: Tank_front_wheel
+    3300008: Tank_front_wheel 1
+    3300010: Tank_rear_wheel
+    3300012: Tank_rear_wheel 1
+    3300014: Tank_track
+    3300016: Tank_track 1
+    4300000: Tank_exhaust
+    4300002: Tank_track
+    4300004: Tank_rear_wheel
+    4300006: Tank_front_wheel
+    4300008: Tank_track
+    4300010: Tank_rear_wheel
+    4300012: Tank_front_wheel
+    4300014: Tank_exhaust
+    4300016: Tank_body_geom
+    7400000: tank_roll
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: tank_roll
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Tank_body
+        weight: 1
+      - path: Tank_body/Tank_body_geom
+        weight: 1
+      - path: Tank_body/Tank_transmission_L
+        weight: 1
+      - path: Tank_body/Tank_transmission_L/Tank_exhaust
+        weight: 1
+      - path: Tank_body/Tank_transmission_L/Tank_front_wheel
+        weight: 1
+      - path: Tank_body/Tank_transmission_L/Tank_rear_wheel
+        weight: 1
+      - path: Tank_body/Tank_transmission_L/Tank_track
+        weight: 1
+      - path: Tank_body/Tank_transmission_R
+        weight: 1
+      - path: Tank_body/Tank_transmission_R/Tank_exhaust 1
+        weight: 1
+      - path: Tank_body/Tank_transmission_R/Tank_front_wheel 1
+        weight: 1
+      - path: Tank_body/Tank_transmission_R/Tank_rear_wheel 1
+        weight: 1
+      - path: Tank_body/Tank_transmission_R/Tank_track 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
