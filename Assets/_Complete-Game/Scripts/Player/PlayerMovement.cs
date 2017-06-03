@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnitySampleAssets.CrossPlatformInput;
 
 namespace CompleteProject
 {
@@ -15,7 +14,7 @@ namespace CompleteProject
         void Awake ()
         {
             floorMask = LayerMask.GetMask ("Floor");
-            anim = GetComponent <Animator> ();
+            //anim = GetComponent <Animator> ();
             playerRigidbody = GetComponent <Rigidbody> ();
         }
 
@@ -25,7 +24,7 @@ namespace CompleteProject
             float v = Input.GetAxisRaw("Vertical");
             Move (h, v);
             Turning ();
-            Animating (h, v);
+            //Animating (h, v);
         }
 
         void Move (float h, float v)

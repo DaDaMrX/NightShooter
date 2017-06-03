@@ -11,22 +11,17 @@ namespace CompleteProject
         public int currentHealth;
         public Slider healthSlider;
         public Image damageImage;
-        public AudioClip deathClip;
         public float flashSpeed = 5f;
         public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
 
-        Animator anim;
-        AudioSource playerAudio;
-        PlayerMovement playerMovement;
+        //public AudioSource playerAudio;
         PlayerShooting playerShooting;
         bool isDead;
         bool damaged;
 
         void Awake ()
         {
-            anim = GetComponent <Animator> ();
-            playerAudio = GetComponent <AudioSource> ();
-            playerMovement = GetComponent <PlayerMovement> ();
+            //playerAudio = GetComponent <AudioSource> ();
             playerShooting = GetComponentInChildren <PlayerShooting> ();
             currentHealth = startingHealth;
         }
@@ -49,7 +44,7 @@ namespace CompleteProject
             damaged = true;
             currentHealth -= amount;
             healthSlider.value = currentHealth;
-            playerAudio.Play ();
+            //playerAudio.Play ();
             if(currentHealth <= 0 && !isDead)
             {
                 Death ();
@@ -60,10 +55,6 @@ namespace CompleteProject
         {
             isDead = true;
             playerShooting.DisableEffects ();
-            anim.SetTrigger ("Die");
-            playerAudio.clip = deathClip;
-            playerAudio.Play ();
-            playerMovement.enabled = false;
             playerShooting.enabled = false;
         }
 

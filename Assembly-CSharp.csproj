@@ -46,12 +46,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\_Complete-Game\MobileInput\Scripts\CrossPlatformInputManager.cs" />
-     <Compile Include="Assets\_Complete-Game\MobileInput\Scripts\Joystick.cs" />
-     <Compile Include="Assets\_Complete-Game\MobileInput\Scripts\MobileControlRig.cs" />
-     <Compile Include="Assets\_Complete-Game\MobileInput\Scripts\PlatformSpecific\MobileInput.cs" />
-     <Compile Include="Assets\_Complete-Game\MobileInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
-     <Compile Include="Assets\_Complete-Game\MobileInput\Scripts\VirtualInput.cs" />
      <Compile Include="Assets\_Complete-Game\Scripts\Audio\MixLevels.cs" />
      <Compile Include="Assets\_Complete-Game\Scripts\Camera\CameraFollow.cs" />
      <Compile Include="Assets\_Complete-Game\Scripts\Enemy\EnemyAttack.cs" />
@@ -60,14 +54,21 @@
      <Compile Include="Assets\_Complete-Game\Scripts\Helpers\RandomAnimationPoint.cs" />
      <Compile Include="Assets\_Complete-Game\Scripts\Helpers\RandomParticlePoint.cs" />
      <Compile Include="Assets\_Complete-Game\Scripts\Helpers\VolumeHandler.cs" />
+     <Compile Include="Assets\_Complete-Game\Scripts\Managers\EnemyCount.cs" />
      <Compile Include="Assets\_Complete-Game\Scripts\Managers\EnemyManager.cs" />
      <Compile Include="Assets\_Complete-Game\Scripts\Managers\GameOverManager.cs" />
+     <Compile Include="Assets\_Complete-Game\Scripts\Managers\GoManager.cs" />
      <Compile Include="Assets\_Complete-Game\Scripts\Managers\PauseManager.cs" />
+     <Compile Include="Assets\_Complete-Game\Scripts\Managers\RoomEnter.cs" />
      <Compile Include="Assets\_Complete-Game\Scripts\Managers\ScoreManager.cs" />
+     <Compile Include="Assets\_Complete-Game\Scripts\Managers\Win.cs" />
      <Compile Include="Assets\_Complete-Game\Scripts\Player\PlayerHealth.cs" />
      <Compile Include="Assets\_Complete-Game\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\_Complete-Game\Scripts\Player\PlayerShooting.cs" />
+     <None Include="Assets\Standard Assets\Fonts\OpenSans\License!.txt" />
+     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Fonts\LuckiestGuy\LICENSE.txt" />
+     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -89,6 +90,10 @@
  <Reference Include="UnityEngine.VR">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{49CFA921-2D1D-9545-B596-768D381BA1D5}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

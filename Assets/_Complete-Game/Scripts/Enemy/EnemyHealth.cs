@@ -9,7 +9,11 @@ namespace CompleteProject
         public float sinkSpeed = 2.5f;
         public int scoreValue = 10;
         public AudioClip deathClip;
+        public string strManager = "/EnemyManager";
         
+        GameObject manager;
+        EnemyCount enemyCount;
+
         Animator anim;
         AudioSource enemyAudio;
         ParticleSystem hitParticles;
@@ -19,6 +23,8 @@ namespace CompleteProject
 
         void Awake ()
         {
+            manager = GameObject.Find(strManager);
+            enemyCount = manager.GetComponent <EnemyCount> ();
             anim = GetComponent <Animator> ();
             enemyAudio = GetComponent <AudioSource> ();
             hitParticles = GetComponentInChildren <ParticleSystem> ();
@@ -51,6 +57,7 @@ namespace CompleteProject
 
         void Death ()
         {
+            enemyCount.dead = enemyCount.dead + 1;
             isDead = true;
             capsuleCollider.isTrigger = true;
             anim.SetTrigger ("Dead");

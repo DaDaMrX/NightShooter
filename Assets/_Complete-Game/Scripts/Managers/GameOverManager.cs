@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
 namespace CompleteProject
 {
     public class GameOverManager : MonoBehaviour
     {
         public PlayerHealth playerHealth;
-
+        
         Animator anim;
 
         void Awake ()
