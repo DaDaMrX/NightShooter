@@ -1,12 +1,10 @@
 # 游戏说明
 
-[TOC]
-
 下载地址：<https://github.com/DaDaMrX/NightShooter/releases>
 
-## 故事背景
+## 游戏介绍
 
-这是利用Unity3D 5.6开发的一个俯瞰视图等距（isometric）视角的射击游戏，游戏的主人公小男孩在自己的房间中睡觉时，梦见他的玩具们都成了坏人来攻击他，而他也有了一把镭射枪，通过向玩具们射击来得分，当小男孩的生命值减到0时，游戏结束。
+这是利用Unity3D（5.6.1f1版本）开发的一个第一人称视角（FPS）射击游戏。游戏中玩家在一个正交迂回的地图环境中前进，沿途会出现一些怪物，玩家消灭怪物后前进，消灭最后的大BOSS后，屏幕提示MISSION SUCCESS，任务成功，游戏结束；若途中玩家被怪物攻击直至生命值减为0时，屏幕提示GAME OVER，任务失败，游戏同样结束。
 
 ## 游戏控制
 
@@ -16,7 +14,7 @@
 
 游戏开始玩家的生命值以状态条的形式现实在窗口左下方，被敌人攻击生命值就会下降，当被敌人攻击10次后，玩家生命值减为0，游戏结束。
 
-游戏中共有两种小怪和一种大怪，小怪被镭射激光击中2次后死亡，大怪被击中5次后死亡。游戏共设有3个关卡，对于每个关卡我们在特定的位置已设定触发器（类似于隐形的墙），玩家一旦穿过这些隐形的强，就会触发事件，即怪物会在随机位置生成，怪物一旦产生后就不断沿最短路向玩家移动，与玩家接触后就会对玩家产生伤害，直到被消灭或者玩家生命值减为0游戏结束。每个关卡都会产生15个怪物，其中第三个关卡有一个最终大boss！！！一旦消灭了一个关卡的所有15个怪物，会出现绿色箭头提示玩家继续向前。最后打完大boss即获得胜利！
+游戏中共有两种小怪和一种大怪，小怪被镭射激光击中3次后死亡，大怪被击中4次后死亡。游戏共设有3个关卡，对于每个关卡我们在特定的位置已设定触发器（类似于隐形的墙），玩家一旦穿过这些隐形的强，就会触发事件，即怪物会在随机位置生成，怪物一旦产生后就不断沿最短路向玩家移动，与玩家接触后就会对玩家产生伤害，直到被消灭或者玩家生命值减为0游戏结束。每个关卡都会产生12个怪物，其中第三个关卡有一个最终大BOSS！！！一旦消灭了一个关卡的所有12个怪物，会出现绿色箭头提示玩家继续向前。最后打完大BOSS即获得胜利！
 
 # 开发过程
 
@@ -30,7 +28,7 @@
 
 环境中的主体为整个游戏场景的3D模型，类似于迷宫之类的路线。以下是该游戏场景的俯视图：
 
-
+![](Images/overview.png)
 
 场景的制作过程：首先我们在3ds max中建立了两种plain，一种是水平放置的，另一种是垂直放置的，然后导出成fbx文件再导入我们的unity场景中。其中水平的作为场景的地板，垂直的作为墙壁。我们还在网上找了地板和墙壁的贴图，做成材质分别附加在地板和墙壁上。场景的具体实现就是根据需要复制，平移，旋转等等，慢慢一步一步形成整个场景，这确实是一个比较繁琐的工作，但一旦掌握了技巧，还是，得心应手的。初步形成之后，为了让怪物出现得更突然，我们还加了箱子预组件，随机安放在路线上，让游戏体验更好。
 
@@ -38,19 +36,13 @@
 
 ### 灯光
 
-灯光由三部分组成，场景主光线（SceneLighting），装饰灯泡组（LightProbeGroup）和反射面（ReflectionProbe）组成。
-
-### 镜头
-
-用了unity自带的第一人称角色（fps）视角，其中左下角加上了玩家的生命值，右下角配了一把枪，中间还加了个准心，总得来说就是一般射击类游戏的视角。
+灯光由两个不同方向的平行光源组合而成，尽可能保证玩家走在地图中的每个位置都是合适的视野。
 
 ### 玩家
 
-玩家对象有多个组件。
+玩家设置为一个FPSController，并使用了unity自带的第一人称角色（PFS）视角，其中左下角加上了玩家的生命值，右下角配了一把枪，中间还加了个准心，总得来说就是一般射击类游戏的视角。
 
-- 动画控制器控制玩家的动画状态,使其在等待（Idle），移动（Move）和死亡（Death）之间切换。默认状态时等待。
-  ![](Images/PlayerAnimation.png)
-- 刚体（Rigidbody）组件使其能与游戏场景发生碰撞，使其能绕开障碍，在位置上锁定Y轴，使其不能发生上下偏离，旋转锁定X轴和Z轴，使其只能在竖直方向绕Y轴转向。加入碰撞器（Collider）用于判断是否与敌人相遇。还加上了被攻击时的音效，在收到敌人攻击时触发播放。控制脚本在后面介绍。
+为玩家添加了刚体（Rigidbody）组件使其能与游戏场景发生碰撞，使其能绕开障碍，在位置上锁定Y轴，使其不能发生上下偏离，旋转锁定X轴和Z轴，使其只能在竖直方向绕Y轴转向。加入碰撞器（Collider）用于判断是否与敌人相遇。还加上了被攻击时的音效，在收到敌人攻击时触发播放。控制脚本在后面介绍。
 
 ![](Images/Player.png)
 
@@ -72,63 +64,6 @@ UI由如下及部分组成，左下方表示玩家生命值的部分，由一个
 ## 脚本控制
 
 ![](Images/Sequence_Diagram.jpg)
-
-### 玩家移动
-
-获取水平垂直方向的输入，然后改变玩家的位置。
-
-```c#
-void FixedUpdate ()
-{
-      float h = Input.GetAxisRaw("Horizontal");
-      float v = Input.GetAxisRaw("Vertical");
-      Move (h, v);
-      Turning ();
-      Animating (h, v);
-}
-void Move (float h, float v)
-{
-    movement.Set (h, 0f, v);
-    movement = movement.normalized * speed * Time.deltaTime;
-    playerRigidbody.MovePosition (transform.position + movement);
-}
-```
-
-### 玩家转向
-
-从镜头视点到鼠标位置连一条射线`camRay`，如果打在Floor上，就调整玩家方向。
-
-```c#
-void Turning ()
-{
-    Ray camRay = Camera.main.ScreenPointToRay (Input.mousePosition);
-    RaycastHit floorHit;
-    if(Physics.Raycast (camRay, out floorHit, camRayLength, floorMask))
-    {
-        Vector3 playerToMouse = floorHit.point - transform.position;
-        playerToMouse.y = 0f;
-        Quaternion newRotatation = Quaternion.LookRotation (playerToMouse);
-        playerRigidbody.MoveRotation (newRotatation);
-    }
-}
-```
-
-### 镜头跟踪
-
-开始时获得镜头与玩家的相对位置，存储在向量`offset`中，然后时刻更新镜头的位置。
-
-```c#
-Vector3 offset;
-void Start ()
-{
-    offset = transform.position - target.position;
-}
-void FixedUpdate ()
-{
-    Vector3 targetCamPos = target.position + offset;
-    transform.position = Vector3.Lerp (transform.position, targetCamPos, smoothing * Time.deltaTime);
-}
-```
 
 ### 玩家射击
 
